@@ -1,0 +1,296 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>E-Voting System</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#fcf8f8] group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f3e7e8] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#1b0e0e]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-[#1b0e0e] text-lg font-bold leading-tight tracking-[-0.015em]">Student Council E-Voting</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#1b0e0e] text-sm font-medium leading-normal" href="#">Home</a>
+              <a class="text-[#1b0e0e] text-sm font-medium leading-normal" href="#">Features</a>
+              <a class="text-[#1b0e0e] text-sm font-medium leading-normal" href="#">How It Works</a>
+              <a class="text-[#1b0e0e] text-sm font-medium leading-normal" href="#">About</a>
+              <a class="text-[#1b0e0e] text-sm font-medium leading-normal" href="#">Contact</a>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#ea2832] text-[#fcf8f8] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Register Now</span>
+              </button>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f3e7e8] text-[#1b0e0e] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Login</span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="@container">
+              <div class="@[480px]:px-4 @[480px]:py-3">
+                <div
+                  class="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-[#fcf8f8] @[480px]:rounded-xl min-h-80"
+                  style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 25%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuClRYIAAM0jQlhlHynPVPd6Mu3O4QfvDGAG9dtsJ_ETfF4jQ-399Ugwp_nE_ppXpQTXfRNxZTDe_zwXWjAXyL6C9-_2KQpVQ7erPrj2YOAflCUqK2Yhzc6XBVR-S7O5IDWBVxJUaSqJxPexKxpi_jZEYNG8rdaNP86sEQ-56svflZGk7CFu0jfEnLSpJFYHH3CrenWd0WNz6TRD-XuXM748HK86npfGvW0PvBRlSwVJx8fH5t0I-UwMPWommCpRa6SsWIhGJCgczGQ");'
+                >
+                  <div class="flex p-4"><p class="text-white tracking-light text-[28px] font-bold leading-tight">Empowering Student Voices Through Secure E-Voting</p></div>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-[#1b0e0e] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Feature Highlights</h2>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-[#fcf8f8] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoS5d11IZqdFvO1s7TitpiBbvIy3iicp8LIK-eOuQNRT1wjxaAQO8NkYM8NmSSdf7NiEkrGjtCVvEa7AH3z_RbSHUFd_90wwiJpG46hjkUu41AiTjIIy-6KEho4WPBK_CdutOZYVJULZhQQ3IlGPqibK0DuyOVHm4tmJR5EHLA4uQ0JIE9l347vOKTDx-jC39gQN5oPxej_jIZA7127kvSA2o3sJ-3PF5XnxH3OzOnAg0_F4Sa17moWYEuB3l_dEQw7FAIQ8mCP64");'
+                  ></div>
+                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                    <div>
+                      <p class="text-[#1b0e0e] text-base font-medium leading-normal">User Accounts</p>
+                      <p class="text-[#994d51] text-sm font-normal leading-normal">Register/Login securely using student credentials.</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f3e7e8] text-[#1b0e0e] text-sm font-bold leading-normal tracking-[0.015em]"
+                    >
+                      <span class="truncate">Learn More</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-[#fcf8f8] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBaszOFQeDf8_PjMr03eOtuQplORE9fj0_iZc3gOydxQqpbFg3bbVTEuFZeESu9Ez6vVodQXOls1RrQ9mpmuuaocvHTFOU5ExfnKvOqWdKKdJsadstenxADYGxDhH2Djk2QOIKusY3qM8ukt4D_elh-GboOXUaGXEHKQaXORMNqMKwKhQF2hnTVe9DbiKhqVyJOplmzcY1IPB1SXnjuIaTG6Vao_v1S7UqvLCLBgKwHObB_luJPdoZN9UtVihhRx_N1LCgcEfc5LHA");'
+                  ></div>
+                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                    <div>
+                      <p class="text-[#1b0e0e] text-base font-medium leading-normal">Candidate Profiles</p>
+                      <p class="text-[#994d51] text-sm font-normal leading-normal">View candidates and their platforms.</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f3e7e8] text-[#1b0e0e] text-sm font-bold leading-normal tracking-[0.015em]"
+                    >
+                      <span class="truncate">Learn More</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-[#fcf8f8] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADzUHfrD874YjSjtHZPOSt0qFZbrg-ofrtmwPB51Q36alTTcdyC-GcikqQ5W5PTTRUyXpuNVclVeF6wXclw1G_OwWSWLJf-As3lP0egPLDr82I-sNlPSmDPqTyy9r5AivuDII6EosopYjNV-JaPRpmQIobRVoRQ_sxOE_oV5dSG_rGrL2zrotmwLCqWOhlIi5UyhRoDSNXef-PJKuU4clpAEI8enLsSz_HxH4lCOK6JrHflt5XteEzGtfmkSRhfsrOwKe240NGaa0");'
+                  ></div>
+                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                    <div>
+                      <p class="text-[#1b0e0e] text-base font-medium leading-normal">Secure Voting</p>
+                      <p class="text-[#994d51] text-sm font-normal leading-normal">Easy, anonymous ballot casting.</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f3e7e8] text-[#1b0e0e] text-sm font-bold leading-normal tracking-[0.015em]"
+                    >
+                      <span class="truncate">Learn More</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-[#fcf8f8] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAD7LdvidomYtc-LXKKgQwUBz37XDATiQa0vfjL9UrkaSWlwUC3Q-k5EkKUrDxEGiy5J9n4tMu_FjctKZNvY4mHjuDgvQITv5RIN1YcxU1HL_ebkBzGCzQ4f-JBzQ3XLnHf2ZU_TSuhB9p141xWnDSIPclgypdQu7Me5nbQdRPcfn3r8Z1rR70CObFqNjdcFG-A5gzYs3MCzfDJbO9Fl1N8muvdQiBoNKYcdodOe_641cdc2UqxTRwzTyVv_CulI0jpJV8mx968amw");'
+                  ></div>
+                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                    <div>
+                      <p class="text-[#1b0e0e] text-base font-medium leading-normal">Live Results Dashboard</p>
+                      <p class="text-[#994d51] text-sm font-normal leading-normal">Real-time results and analytics.</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f3e7e8] text-[#1b0e0e] text-sm font-bold leading-normal tracking-[0.015em]"
+                    >
+                      <span class="truncate">Learn More</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-[#fcf8f8] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOnVVp8o7wmLq1vMLiywLwgqMjYZWQLmDROpMUqme2t3ipNEGksAZd2c87zyte2F4wDVA3lhytkHpGjDD3ywZ2-M_LpmoWSC-wYML4E6XX6ZTfJGdXQkaxsuE32ozIyf_wfLfP_0PdqhLaGUqWFNVm42jL1sGThzniRjg_PLmfJMKuRniiNlIXCkg77bzm8WabB-PBau3rjf3hk0ParohHPtRH1Go_vIWk29QFQPkh4hqunc6pW4Sct6i6IPR05DxxjMl24Sf-Yr8");'
+                  ></div>
+                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                    <div>
+                      <p class="text-[#1b0e0e] text-base font-medium leading-normal">Election Calendar</p>
+                      <p class="text-[#994d51] text-sm font-normal leading-normal">Upcoming elections with voting dates.</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f3e7e8] text-[#1b0e0e] text-sm font-bold leading-normal tracking-[0.015em]"
+                    >
+                      <span class="truncate">Learn More</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-[#1b0e0e] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">How It Works</h2>
+            <div class="grid grid-cols-[40px_1fr] gap-x-2 px-4">
+              <div class="flex flex-col items-center gap-1 pt-3">
+                <div class="text-[#1b0e0e]" data-icon="ListBullets" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M80,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H88A8,8,0,0,1,80,64Zm136,56H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,64H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16ZM44,52A12,12,0,1,0,56,64,12,12,0,0,0,44,52Zm0,64a12,12,0,1,0,12,12A12,12,0,0,0,44,116Zm0,64a12,12,0,1,0,12,12A12,12,0,0,0,44,180Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="w-[1.5px] bg-[#e7d0d1] h-2 grow"></div>
+              </div>
+              <div class="flex flex-1 flex-col py-3">
+                <p class="text-[#1b0e0e] text-base font-medium leading-normal">Register</p>
+                <p class="text-[#994d51] text-base font-normal leading-normal">Create your account with your student ID.</p>
+              </div>
+              <div class="flex flex-col items-center gap-1">
+                <div class="w-[1.5px] bg-[#e7d0d1] h-2"></div>
+                <div class="text-[#1b0e0e]" data-icon="ShieldCheck" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M208,40H48A16,16,0,0,0,32,56v58.78c0,89.61,75.82,119.34,91,124.39a15.53,15.53,0,0,0,10,0c15.2-5.05,91-34.78,91-124.39V56A16,16,0,0,0,208,40Zm0,74.79c0,78.42-66.35,104.62-80,109.18-13.53-4.51-80-30.69-80-109.18V56H208ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.68l50.34-50.34a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="w-[1.5px] bg-[#e7d0d1] h-2 grow"></div>
+              </div>
+              <div class="flex flex-1 flex-col py-3">
+                <p class="text-[#1b0e0e] text-base font-medium leading-normal">Choose Election</p>
+                <p class="text-[#994d51] text-base font-normal leading-normal">Select the election you want to participate in.</p>
+              </div>
+              <div class="flex flex-col items-center gap-1">
+                <div class="w-[1.5px] bg-[#e7d0d1] h-2"></div>
+                <div class="text-[#1b0e0e]" data-icon="CursorClick" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M169.64,134.33l44.77-19.46A16,16,0,0,0,213,85.07L52.92,32.8A16,16,0,0,0,32.8,52.92L85.07,213a15.83,15.83,0,0,0,14.41,11l.79,0a15.83,15.83,0,0,0,14.6-9.59h0l19.46-44.77L184,219.31a16,16,0,0,0,22.63,0l12.68-12.68a16,16,0,0,0,0-22.63Zm-69.48,73.76.06-.05Zm95.15-.09-49.66-49.67a16,16,0,0,0-26,4.94l-19.42,44.65L48,48l159.87,52.21-44.64,19.41a16,16,0,0,0-4.94,26L208,195.31ZM88,24V16a8,8,0,0,1,16,0v8a8,8,0,0,1-16,0ZM8,96a8,8,0,0,1,8-8h8a8,8,0,0,1,0,16H16A8,8,0,0,1,8,96ZM120.85,28.42l8-16a8,8,0,0,1,14.31,7.16l-8,16a8,8,0,1,1-14.31-7.16Zm-81.69,96a8,8,0,0,1-3.58,10.74l-16,8a8,8,0,0,1-7.16-14.31l16-8A8,8,0,0,1,39.16,124.42Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="w-[1.5px] bg-[#e7d0d1] h-2 grow"></div>
+              </div>
+              <div class="flex flex-1 flex-col py-3">
+                <p class="text-[#1b0e0e] text-base font-medium leading-normal">Vote</p>
+                <p class="text-[#994d51] text-base font-normal leading-normal">Cast your vote securely for your preferred candidates.</p>
+              </div>
+              <div class="flex flex-col items-center gap-1 pb-3">
+                <div class="w-[1.5px] bg-[#e7d0d1] h-2"></div>
+                <div class="text-[#1b0e0e]" data-icon="PresentationChart" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176ZM104,120v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32-16v40a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32-16v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="flex flex-1 flex-col py-3">
+                <p class="text-[#1b0e0e] text-base font-medium leading-normal">View Results</p>
+                <p class="text-[#994d51] text-base font-normal leading-normal">View election results in real-time.</p>
+              </div>
+            </div>
+            <h2 class="text-[#1b0e0e] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About the Platform</h2>
+            <p class="text-[#1b0e0e] text-base font-normal leading-normal pb-3 pt-1 px-4">
+              Our E-Voting system was built to enhance transparency, convenience, and accessibility in student elections. We believe that every student's voice should be heard, and
+              our platform ensures a fair and secure voting process for all.
+            </p>
+            <h2 class="text-[#1b0e0e] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Contact &amp; Support</h2>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <input
+                  placeholder="Your Email"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1b0e0e] focus:outline-0 focus:ring-0 border border-[#e7d0d1] bg-[#fcf8f8] focus:border-[#e7d0d1] h-14 placeholder:text-[#994d51] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <textarea
+                  placeholder="Your Message"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1b0e0e] focus:outline-0 focus:ring-0 border border-[#e7d0d1] bg-[#fcf8f8] focus:border-[#e7d0d1] min-h-36 placeholder:text-[#994d51] p-[15px] text-base font-normal leading-normal"
+                ></textarea>
+              </label>
+            </div>
+            <div class="flex px-4 py-3 justify-end">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#ea2832] text-[#fcf8f8] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Send</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                <a class="text-[#994d51] text-base font-normal leading-normal min-w-40" href="#">FAQs</a>
+                <a class="text-[#994d51] text-base font-normal leading-normal min-w-40" href="#">Student Council Contact Form</a>
+                <a class="text-[#994d51] text-base font-normal leading-normal min-w-40" href="#">Help</a>
+                <a class="text-[#994d51] text-base font-normal leading-normal min-w-40" href="#">Terms of Use</a>
+                <a class="text-[#994d51] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
+              </div>
+              <div class="flex flex-wrap justify-center gap-4">
+                <a href="#">
+                  <div class="text-[#994d51]" data-icon="TwitterLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-[#994d51]" data-icon="FacebookLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-[#994d51]" data-icon="InstagramLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <p class="text-[#994d51] text-base font-normal leading-normal">© 2023 Student Council E-Voting. All rights reserved.</p>
+            </footer>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Council E-Voting</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,"> 
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Public+Sans:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-[#fcf8f8] font-sans">
+    <div class="min-h-screen flex flex-col overflow-x-hidden">
+      <!-- Header -->
+      <header class="flex items-center justify-between border-b border-[#f3e7e8] px-10 py-3 ">
+        <div class="flex items-center gap-4 text-[#1b0e0e]">
+          <div class="w-6 h-6">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.08 24L4 19.25l5.96-10.5L18.04 13.5 18.04 4h11.91v9.5L38.04 8.75 44 19.25 35.92 24 44 28.75 38.04 39.25 29.96 34.5V44H18.04v-9.5L9.96 39.25 4 28.75 12.08 24z" fill="currentColor"></path>
+            </svg>
+          </div>
+          <h2 class="text-lg font-bold tracking-tight">Student Council E-Voting</h2>
+        </div>
+        <nav class="flex items-center gap-8">
+          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#features">Features</a>
+          <a class="nav-link" href="#how-it-works">How It Works</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <div class="flex gap-2">
+            <!-- Register Now Button -->
+            <button onclick="toggleRegisterModal()" class="bg-[#ea2832] text-white font-semibold text-sm px-5 py-2 rounded-xl shadow-md hover:bg-[#c9222b] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#ea2832] transition duration-200">
+                Register Now
+            </button>
+
+            <!-- Login Button -->
+            <button onclick="toggleModal('loginModal')" class="bg-[#f3e7e8] text-[#1b0e0e] font-semibold text-sm px-5 py-2 rounded-xl shadow-md hover:bg-[#e6d4d5] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#f3e7e8] transition duration-200">
+                Login
+            </button>
+
+
+          </div>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="px-10 py-8">
+        <div class="hero-section rounded-xl min-h-80 flex items-end p-4">
+          <h1 class="text-white text-[28px] font-bold leading-tight">Empowering Student Voices Through Secure E-Voting</h1>
+        </div>
+      </section>
+
+      
+        <!-- Feature Highlights -->
+        <section id="features" class="px-6 py-4 bg-[#fcf8f8]">
+            <h2 class="text-xl font-bold text-[#1b0e0e] pb-3">Feature Highlights</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+
+                <!-- Feature 1: User Accounts -->
+                <div class="rounded-lg bg-white shadow p-3">
+                <div class="aspect-[3/3] bg-cover bg-center rounded-lg mb-2" style="background-image: url('images/user.png');"></div>
+                <h3 class="font-semibold text-sm text-[#1b0e0e] mb-1">User Accounts</h3>
+                <p class="text-[#994d51] text-xs">Register/Login securely using student credentials.</p>
+                </div>
+
+                <!-- Feature 2: Candidate Profiles -->
+                <div class="rounded-lg bg-white shadow p-3">
+                <div class="aspect-[3/3] bg-cover bg-center rounded-lg mb-2" style="background-image: url('images/candidate.png');"></div>
+                <h3 class="font-semibold text-sm text-[#1b0e0e] mb-1">Candidate Profiles</h3>
+                <p class="text-[#994d51] text-xs">View candidates and their platforms.</p>
+                </div>
+
+                <!-- Feature 3: Secure Voting -->
+                <div class="rounded-lg bg-white shadow p-3">
+                <div class="aspect-[3/3] bg-cover bg-center rounded-lg mb-2" style="background-image: url('images/vote.png');"></div>
+                <h3 class="font-semibold text-sm text-[#1b0e0e] mb-1">Secure Voting</h3>
+                <p class="text-[#994d51] text-xs">Easy, anonymous ballot casting.</p>
+                </div>
+
+                <!-- Feature 4: Live Results Dashboard -->
+                <div class="rounded-lg bg-white shadow p-3">
+                <div class="aspect-[3/3] mb-2 overflow-hidden rounded-lg flex items-center justify-center bg-[#f4f4f4]">
+                    <img src="images/result.png" alt="Live Results" class="object-contain h-full w-full" />
+                </div>
+                <h3 class="font-semibold text-sm text-[#1b0e0e] mb-1">Live Results Dashboard</h3>
+                <p class="text-[#994d51] text-xs">Real-time election results and analytics.</p>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+
+      <!-- How It Works -->
+      <section id="how-it-works" class="px-10 py-6 bg-[#fef8f8]">
+    <h2 class="text-2xl font-bold text-[#1b0e0e] pb-4">How It Works</h2>
+    <div class="relative border-l-2 border-[#994d51] pl-6 space-y-6">
+
+    <!-- Step 1: Register -->
+    <div class="relative flex items-start space-x-3">
+      <div class="absolute -left-6 text-[#994d51] bg-white p-1 rounded-full">
+        <!-- List icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="font-semibold text-[#1b0e0e]">Register</h3>
+        <p class="text-[#994d51] text-sm">Create your account with your student ID.</p>
+      </div>
+    </div>
+
+    <!-- Step 2: Choose Election -->
+    <div class="relative flex items-start space-x-3">
+      <div class="absolute -left-6 text-[#994d51] bg-white p-1 rounded-full">
+        <!-- Shield icon -->
+         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M9 11l3 3L22 4M2 12h4M2 18h4" />
+        </svg>
+      </div>
+      <div>
+        <h3 class="font-semibold text-[#1b0e0e]">Choose Election</h3>
+        <p class="text-[#994d51] text-sm">Select the election you want to participate in.</p>
+      </div>
+    </div>
+
+    <!-- Step 3: Vote -->
+    <div class="relative flex items-start space-x-3">
+      <div class="absolute -left-6 text-[#994d51] bg-white p-1 rounded-full">
+        <!-- Mouse click icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path d="M9 9l10 10m0 0l-6.5-1.5L17 19zm0 0L14.5 14 19 19z"/>
+          <path d="M5 3v18h14V3H5z"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="font-semibold text-[#1b0e0e]">Vote</h3>
+        <p class="text-[#994d51] text-sm">Cast your vote securely for your preferred candidates.</p>
+      </div>
+    </div>
+
+    <!-- Step 4: View Results -->
+    <div class="relative flex items-start space-x-3">
+      <div class="absolute -left-6 text-[#994d51] bg-white p-1 rounded-full">
+        <!-- Monitor icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path d="M4 5h16v10H4zM8 21h8m-4-6v6"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="font-semibold text-[#1b0e0e]">View Results</h3>
+        <p class="text-[#994d51] text-sm">View election results in real-time.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+      <!-- About Section -->
+      <section id="about" class="px-10 py-6">
+        <h2 class="text-2xl font-bold text-[#1b0e0e] pb-4">About the Platform</h2>
+        <p class="text-[#1b0e0e] max-w-2xl">Our E-Voting system was built to enhance transparency, convenience, and accessibility in student elections. We believe that every student's voice should be heard, and our platform ensures a fair and secure voting process for all.</p>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="px-10 py-6">
+        <h2 class="text-2xl font-bold text-[#1b0e0e] pb-4">Contact & Support</h2>
+        <form class="max-w-lg space-y-4">
+          <input type="email" placeholder="Your Email" class="w-full p-3 border border-[#e7d0d1] rounded-xl bg-[#fcf8f8] placeholder-[#994d51] text-[#1b0e0e]" />
+          <textarea placeholder="Your Message" class="w-full p-3 border border-[#e7d0d1] rounded-xl bg-[#fcf8f8] placeholder-[#994d51] text-[#1b0e0e] min-h-[120px]"></textarea>
+          <div class="text-right">
+            <button type="submit" class="btn-primary">Send</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Footer -->
+      <footer class="mt-auto bg-[#f3e7e8] text-center py-6 text-[#994d51] text-sm">
+        <div class="flex justify-center flex-wrap gap-4 mb-4">
+          <a class="footer-link" href="#">FAQs</a>
+          <a class="footer-link" href="#">Student Council Contact Form</a>
+          <a class="footer-link" href="#">Help</a>
+          <a class="footer-link" href="#">Terms of Use</a>
+          <a class="footer-link" href="#">Privacy Policy</a>
+        </div>
+        <div class="flex justify-center gap-4 mb-2">
+          <a href="#" aria-label="Twitter">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 256 256"><path d="..." /></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 256 256"><path d="..." /></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 256 256"><path d="..." /></svg>
+          </a>
+        </div>
+        <p>© 2025 Student Council E-Voting. All rights reserved.</p>
+      </footer>
+    </div>
+
+
+
+    <!-- Register Modal -->
+        <div id="registerModal" class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center">
+        <div class="bg-white rounded-xl shadow-xl w-full max-w-md p-6 relative">
+            <button onclick="toggleRegisterModal()" class="absolute top-3 right-4 text-gray-500 hover:text-[#ea2832] text-xl">&times;</button>
+            <h2 class="text-xl font-bold text-[#1b0e0e] mb-4 text-center">Create Account</h2>
+            <form class="space-y-4">
+            <input type="text" placeholder="Full Name" class="w-full p-3 border border-[#e7d0d1] rounded-xl placeholder-[#994d51]" required />
+            <input type="email" placeholder="Student Email" class="w-full p-3 border border-[#e7d0d1] rounded-xl placeholder-[#994d51]" required />
+            <input type="password" placeholder="Password" class="w-full p-3 border border-[#e7d0d1] rounded-xl placeholder-[#994d51]" required />
+            <button type="submit" class="btn-primary w-full">Register</button>
+            </form>
+            <p class="text-sm text-center mt-3 text-[#994d51]">
+                Already have an account?
+            <a href="#" class="underline" onclick="switchToLogin()">Login</a>
+            </p>
+
+        </div>
+        </div>
+        
+    <!-- Login Modal -->
+        <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-xl shadow-xl p-6 w-full max-w-sm relative">
+            <!-- Close button -->
+            <button onclick="toggleModal('loginModal')" class="absolute top-3 right-3 text-gray-500 hover:text-red-500 text-xl">&times;</button>
+            <h2 class="text-xl font-bold text-[#1b0e0e] mb-4">Login</h2>
+
+            <form id="loginForm" onsubmit="handleLogin(event)">
+            <div class="mb-3">
+                <label for="loginEmail" class="block text-sm text-[#994d51] font-medium mb-1">Email</label>
+                <input id="loginEmail" type="email" placeholder="Enter your email"
+                class="w-full border border-[#e7d0d1] rounded-xl px-4 py-2 text-[#1b0e0e] bg-[#fcf8f8]" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="loginPassword" class="block text-sm text-[#994d51] font-medium mb-1">Password</label>
+                <input id="loginPassword" type="password" placeholder="Enter your password"
+                class="w-full border border-[#e7d0d1] rounded-xl px-4 py-2 text-[#1b0e0e] bg-[#fcf8f8]" required />
+            </div>
+
+            <!-- Error message -->
+            <p id="loginError" class="text-red-600 text-sm mb-2 hidden">Invalid login. Please try again.</p>
+
+            <!-- Loader -->
+            <div id="loginLoader" class="text-sm text-[#994d51] mb-2 hidden">Logging in...</div>
+
+            <button type="submit" class="btn-primary w-full">Login</button>
+
+            <p class="text-sm text-center mt-3 text-[#994d51]">
+                Don’t have an account?
+                <a href="#" class="underline" onclick="switchToRegister()">Register</a>
+            </p>
+            </form>
+        </div>
+        </div>
+
+
+<script>
+  function toggleModal(id) {
+    const modal = document.getElementById(id);
+    modal?.classList.toggle("hidden");
+  }
+
+  function toggleRegisterModal() {
+    toggleModal('registerModal');
+  }
+
+  function switchToLogin() {
+    toggleModal('registerModal'); // close register
+    toggleModal('loginModal');    // open login
+  }
+
+  function switchToRegister() {
+    toggleModal('loginModal');    // close login
+    toggleModal('registerModal'); // open register
+  }
+</script>
+
+
+
+<script>
+  // Register Form Submission
+  document.getElementById('registerForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('regName').value.trim();
+    const email = document.getElementById('regEmail').value.trim();
+    const studentId = document.getElementById('regId').value.trim();
+    const password = document.getElementById('regPassword').value.trim();
+
+    if (!name || !email || !studentId || !password) {
+      alert("Please fill in all registration fields.");
+      return;
+    }
+
+    // Placeholder for actual registration logic
+    alert(`Registered Successfully!\nName: ${name}\nStudent ID: ${studentId}`);
+    document.getElementById('registerModal').classList.add('hidden');
+  });
+
+  // Login Form Submission
+  document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById('loginEmail').value.trim();
+    const password = document.getElementById('loginPassword').value.trim();
+
+    if (!email || !password) {
+      alert("Please enter both email and password.");
+      return;
+    }
+
+    // Placeholder for actual login logic
+    alert(`Logged in successfully as: ${email}`);
+    document.getElementById('loginModal').classList.add('hidden');
+  });
+</script>
+
+
+<script>
+  function toggleRegisterModal() {
+    const modal = document.getElementById("registerModal");
+    modal.classList.toggle("hidden");
+  }
+
+  // Handle Register Form
+  document.querySelector("#registerModal form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const fullName = this.querySelector('input[placeholder="Full Name"]').value.trim();
+    const email = this.querySelector('input[placeholder="Student Email"]').value.trim();
+    const password = this.querySelector('input[placeholder="Password"]').value.trim();
+
+    if (!fullName || !email || !password) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users") || "[]");
+
+    // Check if email already exists
+    const exists = users.some(user => user.email === email);
+    if (exists) {
+      alert("An account with this email already exists.");
+      return;
+    }
+
+    // Save new user
+    users.push({ fullName, email, password });
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Registration successful! You can now log in.");
+    this.reset();
+    toggleRegisterModal(); // Close modal after registration
+  });
+</script>
+<script>
+  function toggleModal(id) {
+    document.getElementById(id).classList.toggle("hidden");
+  }
+
+  function handleLogin(event) {
+  event.preventDefault();
+
+  const email = document.getElementById("loginEmail").value.trim();
+  const password = document.getElementById("loginPassword").value.trim();
+  const errorEl = document.getElementById("loginError");
+  const loaderEl = document.getElementById("loginLoader");
+
+  errorEl.classList.add("hidden");
+  loaderEl.classList.remove("hidden");
+
+  setTimeout(() => {
+    const users = JSON.parse(localStorage.getItem("users") || "[]");
+    const found = users.find(user => user.email === email && user.password === password);
+
+    loaderEl.classList.add("hidden");
+
+    if (found) {
+      localStorage.setItem("loggedInUser", JSON.stringify(found));
+      alert("Login successful! Redirecting to dashboard...");
+      toggleModal("loginModal");
+      // Optionally redirect:
+      // window.location.href = "dashboard.html";
+    } else {
+      errorEl.classList.remove("hidden");
+    }
+  }, 1000);
+}
+</script>
+
+
+  </body>
+</html>
