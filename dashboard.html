@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voting Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#fcf8f8] text-[#1b0e0e] font-sans">
+
+  <div class="min-h-screen flex flex-col items-center justify-center px-6">
+    <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-md text-center">
+      <h1 class="text-2xl font-bold mb-2">Welcome, <span id="userName">Student</span>!</h1>
+      <p class="text-[#994d51] mb-4">This is your student council voting dashboard.</p>
+
+      <!-- Placeholder Voting Content -->
+      <div class="bg-[#f3e7e8] rounded-lg p-4 mt-6">
+        <p class="text-sm text-[#1b0e0e] font-medium">Voting features coming soon...</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+    if (!user) {
+      alert("You're not logged in. Redirecting to login...");
+      window.location.href = "index.html"; // redirect to login page
+    } else {
+      document.getElementById("userName").textContent = user.fullName;
+    }
+  </script>
+</body>
+</html>
