@@ -7,15 +7,18 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#fcf8f8] text-[#1b0e0e] font-sans">
+  <div class="min-h-screen flex flex-col items-center justify-center px-6 py-10">
+    <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-3xl">
+      <h1 class="text-2xl font-bold mb-2 text-center">Welcome, <span id="userName">Student</span>!</h1>
+      <p class="text-[#994d51] mb-6 text-center">This is your student council voting dashboard.</p>
 
-  <div class="min-h-screen flex flex-col items-center justify-center px-6">
-    <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-md text-center">
-      <h1 class="text-2xl font-bold mb-2">Welcome, <span id="userName">Student</span>!</h1>
-      <p class="text-[#994d51] mb-4">This is your student council voting dashboard.</p>
+      <div class="grid md:grid-cols-2 gap-6 mb-10" id="candidatesContainer"></div>
 
-      <!-- Placeholder Voting Content -->
-      <div class="bg-[#f3e7e8] rounded-lg p-4 mt-6">
-        <p class="text-sm text-[#1b0e0e] font-medium">Voting features coming soon...</p>
+      <div class="bg-[#f3e7e8] rounded-lg p-4 mt-4 text-center">
+        <h2 class="text-lg font-semibold mb-2">Current Vote Result</h2>
+        <div id="resultMessage" class="text-sm text-[#1b0e0e] space-y-1">
+          <p class="italic text-gray-600">Results will be displayed here after voting.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -25,10 +28,112 @@
 
     if (!user) {
       alert("You're not logged in. Redirecting to login...");
-      window.location.href = "index.html"; // redirect to login page
+      window.location.href = "index.html";
     } else {
       document.getElementById("userName").textContent = user.fullName;
     }
+
+    const candidates = [
+      { id: 1, name: "Alex Garcia", position: "President" },
+      { id: 2, name: "Jamie Cruz", position: "President" },
+      { id: 3, name: "Taylor Reyes", position: "Vice President" },
+      { id: 4, name: "Morgan Lee", position: "Vice President" }
+    ];
+
+    const votedPositions = {};
+
+    function renderCandidates() {
+      const container = document.getElementById("candidatesContainer");
+      container.innerHTML = "";
+
+      const grouped = {};
+      candidates.forEach(candidate => {
+        if (!grouped[candidate.position]) grouped[candidate.position] = [];
+        grouped[candidate.position].push(candidate);
+      });
+
+      Object.entries(grouped).forEach(([position, group]) => {
+        const section = document.createElement("div");
+        section.className = "col-span-2";
+
+        const title = document.createElement("h3");
+        title.textContent = position;
+        title.className = "text-xl font-semibold mb-3 text-center text-[#003882]";
+        section.appendChild(title);
+
+        const groupContainer = document.createElement("div");
+        groupContainer.className = "flex flex-col gap-4";
+
+        group.forEach(candidate => {
+          const card = document.createElement("div");
+          card.className = "bg-[#fdf4f5] border border-[#994d51] rounded-lg p-4 shadow-sm flex justify-between items-center";
+
+          const isDisabled = votedPositions[candidate.position];
+
+          card.innerHTML = `
+            <div>
+              <p class="font-bold text-lg">${candidate.name}</p>
+              <p class="text-sm text-[#555]">${candidate.position}</p>
+            </div>
+            <button
+              class="voteBtn bg-[#820000] hover:bg-[#9d0404] text-white px-4 py-2 rounded-md ${isDisabled ? 'opacity-50 cursor-not-allowed' : ''}"
+              data-id="${candidate.id}" data-name="${candidate.name}" data-position="${candidate.position}"
+              ${isDisabled ? 'disabled' : ''}
+            >
+              Vote
+            </button>
+          `;
+
+          groupContainer.appendChild(card);
+        });
+
+        section.appendChild(groupContainer);
+        container.appendChild(section);
+      });
+
+      attachVoteEvents();
+    }
+
+    function attachVoteEvents() {
+      document.querySelectorAll(".voteBtn").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          const position = e.target.dataset.position;
+          const name = e.target.dataset.name;
+          const candidateId = e.target.dataset.id;
+
+          if (votedPositions[position]) return;
+
+          if (confirm(`Are you sure you want to vote for ${name} as ${position}? This cannot be undone.`)) {
+            votedPositions[position] = true;
+
+            const existingResults = JSON.parse(localStorage.getItem("voteResults")) || [];
+            existingResults.push({
+              candidateId: candidateId,
+              candidateName: name,
+              position: position,
+              voter: user.fullName,
+              timestamp: new Date().toISOString()
+            });
+            localStorage.setItem("voteResults", JSON.stringify(existingResults));
+
+            const resultContainer = document.getElementById("resultMessage");
+            const placeholder = resultContainer.querySelector("p.italic");
+            if (placeholder) placeholder.remove();
+
+            const resultLine = document.createElement("p");
+            resultLine.textContent = `You have voted for ${name} as ${position}.`;
+            resultContainer.appendChild(resultLine);
+
+            document.querySelectorAll(`.voteBtn[data-position="${position}"]`).forEach(button => {
+              button.disabled = true;
+              button.classList.add("opacity-50", "cursor-not-allowed");
+            });
+          }
+        });
+      });
+    }
+
+    renderCandidates();
   </script>
 </body>
 </html>
